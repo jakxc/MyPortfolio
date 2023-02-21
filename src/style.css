@@ -1,17 +1,17 @@
 /************ Custom Font ************/
 @font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Bold.ttf');
+	font-family: SourceCodePro;
+	src: url('./assets/font/Source_Code_Pro/static/SourceCodePro-Bold.ttf');
 	font-weight: 700;
 }
 @font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Medium.ttf');
+	font-family: SourceCodePro;
+	src: url('./assets/font/Source_Code_Pro/static/SourceCodePro-Medium.ttf');
 	font-weight: 500;
 }
 @font-face {
-	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Book.ttf');
+	font-family: SourceCodePro;
+	src: url('./assets/font/Source_Code_Pro/static/SourceCodePro-Regular.ttf');
 	font-weight: 400;
 }
 
@@ -33,7 +33,7 @@ body {
   position: relative;
   background-color: #121212 !important;
   color: #fff !important;
-  font-family: 'Centra', sans-serif !important;
+  font-family: 'SourceCodePro', sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -305,7 +305,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     }
 }
 
-.txt-rotate > .wrap {
+.wrap {
+  display: block;
   border-right: 0.08em solid #666;
 }
 
@@ -446,6 +447,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
   margin-bottom: 24px;
 }
+
 .proj-container::before {
   content: "";
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
@@ -459,6 +461,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-container:hover::before {
   height: 100%;
 }
+
+/* .proj-img {
+  width: 519px;
+  height: 380px;
+} */
 
 .proj-text {
   position: absolute;
@@ -573,13 +580,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
+  padding: 18px 0;
   background-image: url('./assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .footer img {
   width: 26%;
 }

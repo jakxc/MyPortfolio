@@ -32,7 +32,7 @@ function Contact()
     {
         event.preventDefault();
         setButtonText("Sending...");
-        let res = await fetch("http://localhost:5000/contact", {
+        let res = await fetch("http://localhost:3000/contact", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
@@ -41,13 +41,12 @@ function Contact()
         });
         setButtonText("Send");
         let data = await res.json();
-        setFormDetails(formInitialDetails);
-        if (data.code == 200) {
-            setStatus({ succes: true, message: 'Message sent successfully'});
+        setFormDetails(initialFormDetails);
+        if (data.code === 200) {
+            setStatus({succes: true, message: 'Message sent successfully'});
         } else {
-            setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
+            setStatus({succes: false, message: 'Something went wrong, please try again later.'});
         }
-
     }
 
     return(
@@ -58,7 +57,7 @@ function Contact()
                         <img src={contactImg} alt="Contact Me"/>
                     </Col>
                     <Col md={6}>
-                        <h2>Get In Touch</h2>
+                        <h2>Contact Me</h2>
                         <form onSubmit={handleSubmit}>
                             <Row>
                                 <Col sm={6} className="px-1">
@@ -100,6 +99,7 @@ function Contact()
                                 <Col>
                                     <textarea
                                         row="6"
+                                        name="message"
                                         value={formDetails.message}
                                         placeholder="Leave comment/message here"
                                         onChange={handleChange}

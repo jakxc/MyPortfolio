@@ -38,19 +38,19 @@ function Skills()
                             <p>Insert skills here</p>
                             <Carousel responsive={responsive} infinite={true} className="skills-slider">
                                 <div className="item"> 
-                                    <img src={meter2} alt="image"/>
+                                    <img src={meter2} alt="React JS"/>
                                     <h5>React JS</h5>
                                 </div>
                                 <div className="item"> 
-                                    <img src={meter2} alt="image"/>
+                                    <img src={meter2} alt="Unity/C#"/>
                                     <h5>Unity/C#</h5>
                                 </div>
                                 <div className="item"> 
-                                    <img src={meter2} alt="image"/>
+                                    <img src={meter2} alt="QT/QML"/>
                                     <h5>QT/QML</h5>
                                 </div>
                                 <div className="item"> 
-                                    <img src={meter2} alt="image"/>
+                                    <img src={meter2} alt="Blender"/>
                                     <h5>Blender/3D Modelling</h5>
                                 </div>
                             </Carousel>
@@ -58,7 +58,7 @@ function Skills()
                     </Col>
                 </Row>
             </Container>
-            <img src={colorSharp} className="background-image-left"/>
+            <img src={colorSharp} className="background-image-left" alt="Background Left"/>
         </section>
     )
 }

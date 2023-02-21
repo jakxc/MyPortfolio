@@ -1,7 +1,8 @@
 import { Col, Row, Container, Nav, Tab} from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import projImg1 from "../assets/img/project-img1.png"
+import lowpolygirl from "../assets/img/lowpolygirl.png"
+import lowpolyplane from "../assets/img/lowpolyplane.png"
 import "animate.css";
 import TrackVisibility from 'react-on-screen';
 
@@ -9,9 +10,14 @@ function Projects()
 {
     const projects = [
         {
-            title: "Project title",
-            desc: "Project desc",
-            imgUrl: projImg1
+            title: "Low Poly Plane",
+            desc: "A simple low poly plane created with Blender. One of my first projects using Blender.",
+            imgUrl: lowpolyplane
+        },
+        {
+            title: "Low Poly Girl",
+            desc: "A low poly girl created with Blender. Inspiration from the movie Coraline.",
+            imgUrl: lowpolygirl
         }
     ]
     return(
@@ -29,17 +35,17 @@ function Projects()
                         <Tab.Container id="projects-tabs" defaultActiveKey="first">
                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                             <Nav.Item>
-                            <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                                <Nav.Link eventKey="first">React Projects</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                            <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                                <Nav.Link eventKey="second">Blender Projects</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                            <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                                <Nav.Link eventKey="third">Unity Projects</Nav.Link>
                             </Nav.Item>
                         </Nav>
                         <Tab.Content>
-                            <Tab.Pane eventKey="first">
+                            <Tab.Pane eventKey="second">
                                 <Row>
                                     {
                                         projects.map((project, index) => {
@@ -58,7 +64,7 @@ function Projects()
                     </Col>
                 </Row>
             </Container>
-            <img className="background-img-right" src={colorSharp2} alt="Background Right"/>
+            {/* <img className="background-img-right" src={colorSharp2} alt="Background Right"/> */}
         </section>
     )
 }
