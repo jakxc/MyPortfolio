@@ -10,7 +10,7 @@ function ProjectCard(props)
                 </div>
                 <div className="proj-text">
                     <h4>{props.title}</h4>
-                    <span>{props.desc}{props.link &&<a href={props.link} className="proj-link">{props.linkDesc}</a>}</span>
+                    <span>{props.desc} {props.link &&<a href={props.link} className="proj-link">{props.linkDesc}</a>}</span>
                 </div>
             </div>
         </Col>

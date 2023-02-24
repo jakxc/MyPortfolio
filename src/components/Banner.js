@@ -59,7 +59,7 @@ function Banner()
                                 <div className={isVisible ? "animate__animated animate__pulse" : ""}>
                                     <span className="welcome-text">Welcome to my porfolio!</span>
                                     <h1>Hi, I am jakxc.<span className="wrap">{text}</span></h1>
-                                    <p>About myself pending...</p>
+                                    <p></p>
                                     <button onClick={() => console.log("Lets connect")}>
                                         Let's connect <ArrowRightCircle size={25} />
                                     </button>

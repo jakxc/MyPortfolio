@@ -16,15 +16,15 @@ function Projects()
         {
             title: "Meme Generator",
             desc: "A simple meme generator created with React. It allows customised text to be placed on a random meme image.",
-            link: "",
-            linkDesc: "",
+            link: "https://github.com/jakxc/Meme-Generator",
+            linkDesc: "Github link to Meme Generator",
             imgUrl: memegenerator
         },
         {
             title: "Tenzies",
             desc: "A simple dice game created with React. The goal of the game is to have each die display the same number in as few rolls as possible.",
-            link: "",
-            linkDesc: "",
+            link: "https://github.com/jakxc/Tenzies-Game",
+            linkDesc: "Github link to Tenzies",
             imgUrl: tenzies
         }
     ]
