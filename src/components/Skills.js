@@ -1,16 +1,14 @@
 import { Col, Container, Row } from "react-bootstrap"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import meter1 from '../assets/img/meter1.svg';
-import meter2 from '../assets/img/meter2.svg';
-import meter3 from '../assets/img/meter3.svg';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import colorSharp from '../assets/img/color-sharp.png';
 
 function Skills()
 {
     const responsive = {
         superLargeDesktop: {
-          // the naming can be any, depends on you.
           breakpoint: { max: 4000, min: 3000 },
           items: 5
         },
@@ -28,6 +26,11 @@ function Skills()
         }
       };
 
+      const reactSkill = 60;
+      const unitySkill = 60;
+      const qmlSkill = 70;
+      const blenderSkill = 50;
+
     return(
         <section className='skills' id='skills'>
             <Container>
@@ -35,22 +38,30 @@ function Skills()
                     <Col>
                         <div className="skills-container">
                             <h2>Skills</h2>
-                            <p>Insert skills here</p>
+                            <p>React JS, Unity Engine/C#, Qt/QML, Blender</p>
                             <Carousel responsive={responsive} infinite={true} className="skills-slider">
-                                <div className="item"> 
-                                    <img src={meter2} alt="React JS"/>
+                                <div className="skill-element">
+                                    <div className="skill-progress"> 
+                                        <CircularProgressbar value={reactSkill} text={`${reactSkill}%`} />
+                                    </div>
                                     <h5>React JS</h5>
                                 </div>
-                                <div className="item"> 
-                                    <img src={meter2} alt="Unity/C#"/>
+                                <div className="skill-element">
+                                    <div className="skill-progress"> 
+                                        <CircularProgressbar value={unitySkill} text={`${unitySkill}%`} />
+                                    </div>
                                     <h5>Unity/C#</h5>
                                 </div>
-                                <div className="item"> 
-                                    <img src={meter2} alt="QT/QML"/>
+                                <div className="skill-element">
+                                    <div className="skill-progress"> 
+                                        <CircularProgressbar value={reactSkill} text={`${qmlSkill}%`} />
+                                    </div>
                                     <h5>QT/QML</h5>
                                 </div>
-                                <div className="item"> 
-                                    <img src={meter2} alt="Blender"/>
+                                <div className="skill-element">
+                                    <div className="skill-progress"> 
+                                        <CircularProgressbar value={reactSkill} text={`${blenderSkill}%`} />
+                                    </div>
                                     <h5>Blender/3D Modelling</h5>
                                 </div>
                             </Carousel>

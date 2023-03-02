@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
+import { HashLink } from 'react-router-hash-link';
+import { BrowserRouter as Router } from "react-router-dom";
+  
 import headerImg from "../assets/img/header-img.svg";
 import "animate.css";
 import TrackVisibility from 'react-on-screen';
@@ -60,9 +63,13 @@ function Banner()
                                     <span className="welcome-text">Welcome to my porfolio!</span>
                                     <h1>Hi, I am jakxc.<span className="wrap">{text}</span></h1>
                                     <p></p>
-                                    <button onClick={() => console.log("Lets connect")}>
-                                        Let's connect <ArrowRightCircle size={25} />
-                                    </button>
+                                    <Router>
+                                        <HashLink to="#contact">
+                                            <button>
+                                                Let's connect <ArrowRightCircle size={25} />
+                                            </button>
+                                        </HashLink>
+                                    </Router>
                                 </div>
                             }
                         </TrackVisibility>

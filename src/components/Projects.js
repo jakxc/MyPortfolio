@@ -6,6 +6,7 @@ import lowpolygirl from "../assets/img/lowpolygirl.png"
 import lowpolyplane from "../assets/img/lowpolyplane.png"
 import memegenerator from "../assets/img/memegenerator.png"
 import tenzies from "../assets/img/tenzies.png"
+import quizzical from "../assets/img/quizzical.png"
 import spaceshooter from "../assets/img/spaceshooter.png"
 import "animate.css";
 import TrackVisibility from "react-on-screen";
@@ -26,6 +27,13 @@ function Projects()
             link: "https://github.com/jakxc/Tenzies-Game",
             linkDesc: "Github link to Tenzies",
             imgUrl: tenzies
+        },
+        {
+            title: "Quizzical",
+            desc: "A trivia quiz game created with React. It contains 5 questions related to Anime/Japanese Managa with multiple choice options.",
+            link: "https://github.com/jakxc/Quizzical",
+            linkDesc: "Github link to Quizzical",
+            imgUrl: quizzical
         }
     ]
 

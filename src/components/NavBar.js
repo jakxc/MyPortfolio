@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/logo.svg';
-import linkedIn from '../assets/img/nav-icon1.svg';
-import facebook from '../assets/img/nav-icon2.svg';
-import instagram from '../assets/img/nav-icon3.svg';
+import linkedIn from '../assets/img/linkedIn-icon.svg';
+import github from '../assets/img/github-icon.png';
+import instagram from '../assets/img/instagram-icon.svg';
 import { HashLink } from 'react-router-hash-link';
-import {
-  BrowserRouter as Router
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function NavBar() {
 
@@ -50,9 +48,9 @@ function NavBar() {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src={linkedIn} alt="" /></a>
-                <a href="#"><img src={facebook} alt="" /></a>
-                <a href="#"><img src={instagram} alt="" /></a>
+                <a href="https://www.linkedin.com/in/jack-chen-798696196/"><img src={linkedIn} alt="" /></a>
+                <a href="https://github.com/jakxc/"><img src={github} alt="" /></a>
+                <a href="https://www.instagram.com/ray.jxc/"><img src={instagram} alt="" /></a>
               </div>
             <HashLink to="#contact">
                 <button className="vvd"><span>Let’s Connect</span></button>

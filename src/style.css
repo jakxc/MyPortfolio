@@ -352,6 +352,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: -60px;
 }
 
+.skill-progress {
+  display: block;
+  width: 175px;
+  height: 175px;
+  margin: 0 auto 10px auto;
+}
+
 .skills h2 {
 	font-size: 45px;
 	font-weight: 700;

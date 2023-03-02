@@ -1,8 +1,8 @@
 import { Col, Container, Row } from "react-bootstrap"
 import logo from "../assets/img/logo.svg"
-import linkedIn from "../assets/img/nav-icon1.svg"
-import facebook from '../assets/img/nav-icon2.svg';
-import instagram from '../assets/img/nav-icon3.svg';
+import linkedIn from '../assets/img/linkedIn-icon.svg';
+import github from '../assets/img/github-icon.png';
+import instagram from '../assets/img/instagram-icon.svg';
 
 function Footer()
 {
@@ -15,9 +15,9 @@ function Footer()
                     </Col>
                     <Col size={12} sm={6} className="text-center text-sm-end">
                         <div className="social-icon">
-                        <a href="#"><img src={linkedIn} alt="Icon" /></a>
-                        <a href="#"><img src={facebook} alt="Icon" /></a>
-                        <a href="#"><img src={instagram} alt="Icon" /></a>
+                        <a href="https://www.linkedin.com/in/jack-chen-798696196/"><img src={linkedIn} alt="" /></a>
+                        <a href="https://github.com/jakxc/"><img src={github} alt="" /></a>
+                        <a href="https://www.instagram.com/ray.jxc/"><img src={instagram} alt="" /></a>
                         </div>
                         <p>Copyright 2023. All Rights Reserved by jakxc</p>
                     </Col>
