@@ -1,7 +1,6 @@
 import {useState} from "react";
 import {Col, Row, Container, Nav, Tab} from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
-import colorSharp2 from "../assets/img/color-sharp2.png";
 import lowpolygirl from "../assets/img/lowpolygirl.png"
 import lowpolyplane from "../assets/img/lowpolyplane.png"
 import memegenerator from "../assets/img/memegenerator.png"

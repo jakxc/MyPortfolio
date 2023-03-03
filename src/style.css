@@ -271,7 +271,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
   padding: 8px 10px;
-  background: linear-gradient(90.21deg, rgba(90, 185, 245, 0.883) -5.91%, rgba(129, 242, 129, 0.51) 111.58%);
+  background: linear-gradient(90.21deg, rgb(60, 60, 60) -5.91%, rgb(0, 0, 0) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
   margin-bottom: 16px;
@@ -444,7 +444,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, rgba(90, 185, 245, 0.883) -5.91%, rgba(129, 242, 129, 0.51) 111.58%);
+    background: linear-gradient(90.21deg, rgb(255, 255, 255) -5.91%, rgb(219, 217, 217) 111.58%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -456,7 +456,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .projects .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(255, 255, 255, 1);
+    color: rgb(0, 0, 0);
+    border: 0.8px solid rgba(255, 255, 255, 1);
 }
 
 .nav-link#projects-tabs-tab-first {
@@ -549,17 +550,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************Contact Css ************/
 .contact {
-  background: linear-gradient(90.21deg, rgba(90, 185, 245, 0.883) -5.91%, rgba(129, 242, 129, 0.51) 111.58%);
+  background: linear-gradient(90.21deg, rgb(60, 60, 60) -5.91%, rgb(0, 0, 0) 111.58%);
   padding: 60px 0 200px 0;
 }
+
 .contact img {
   width: 92%;
 }
+
 .contact h2 {
 	font-size: 45px;
 	font-weight: 700;
   margin-bottom: 30px;
 }
+
 .contact form input, .contact form textarea {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
@@ -573,19 +577,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
 }
+
 .contact form input:focus, .contact form textarea:focus {
   background: rgba(255, 255, 255, 1);
   color: #121212;
 }
+
 .contact form input::placeholder, .contact form textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
   color: #fff;
 }
+
 .contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
   color: #121212;
   opacity: 0.8;
 }
+
 .contact form button {
   font-weight: 700;
   color: #000;
@@ -597,13 +605,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   position: relative;
   transition: 0.3s ease-in-out;
 }
+
 .contact form button span {
   z-index: 1;
   position: relative;
 }
+
 .contact form button:hover {
   color: #fff;
 }
+
 .contact form button::before {
   content: "";
   background: #121212;
@@ -615,6 +626,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 0;
   transition: 0.3s ease-in-out;
 }
+
 .contact form button:hover::before {
   width: 100%;
 }
@@ -622,7 +634,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Footer Css ************/
 .footer {
   padding: 18px 0;
-  background-image: url('./assets/img/footer-bg.png');
+  background-color: #121212;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

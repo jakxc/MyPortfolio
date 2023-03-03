@@ -14,7 +14,7 @@ function Contact()
     }
 
     const [formDetails, setFormDetails] = useState(initialFormDetails);
-    const [buttonText, setButtonText] = useState("Send");
+    // const [buttonText, setButtonText] = useState("Send");
     const [status, setStatus] = useState({});
     const form = useRef();
 
@@ -38,14 +38,14 @@ function Contact()
                 setStatus(
                     {
                         success: true, 
-                        message: result.text
+                        message: "Message was sent successfully."
                     }
                 )
           }, (error) => {
             setStatus(
                 {
                     success: false, 
-                    message: error.text
+                    message: `${error.text} happened`
                 }
             )
           });
@@ -114,7 +114,7 @@ function Contact()
                                             <p className={status.success ?  "failed" : "success"}>{status.message}</p>
                                         </Row>
                                     }
-                                    <button><span>{buttonText}</span></button>
+                                    <button><span>Send</span></button>
                                 </Col>
                             </Row>
                         </form>
