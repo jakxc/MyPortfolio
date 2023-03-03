@@ -42,7 +42,7 @@ function Skills()
                                 {({isVisible}) =>
                                     <div className={isVisible ? "animate__animated animate__pulse" : ""}>
                                         <h2>Skills</h2>
-                                        <p>React JS, Unity Engine/C#, Qt/QML, Blender</p>
+                                        <p>React JS, Unity Engine/C#, Qt/QML and Blender</p>
                                     </div>
                                 }
                             </TrackVisibility>

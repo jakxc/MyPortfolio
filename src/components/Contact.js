@@ -1,5 +1,6 @@
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Col, Container, Row } from "react-bootstrap"
+import emailjs from '@emailjs/browser';
 import foxImg from "../assets/img/fox.png"
 
 function Contact()
@@ -15,6 +16,7 @@ function Contact()
     const [formDetails, setFormDetails] = useState(initialFormDetails);
     const [buttonText, setButtonText] = useState("Send");
     const [status, setStatus] = useState({});
+    const form = useRef();
 
     function handleChange(event)
     {
@@ -28,27 +30,29 @@ function Contact()
         })
     }
 
-    async function handleSubmit(event)
-    {
-        event.preventDefault();
-        setButtonText("Sending...");
-        let res = await fetch("http://localhost:3000/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json;charset=utf-8",
-            },
-            body: JSON.stringify(formDetails),
-        });
-        setButtonText("Send");
-        let data = await res.json();
-        setFormDetails(initialFormDetails);
-        if (data.code === 200) {
-            setStatus({succes: true, message: 'Message sent successfully'});
-        } else {
-            setStatus({succes: false, message: 'Something went wrong, please try again later.'});
-        }
-    }
+    function handleSubmit(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_3cxdgrg', 'template_njb7ckz', form.current, 'lPrP72xsQaNQ8fAhe')
+          .then((result) => {
+                setStatus(
+                    {
+                        success: true, 
+                        message: result.text
+                    }
+                )
+          }, (error) => {
+            setStatus(
+                {
+                    success: false, 
+                    message: error.text
+                }
+            )
+          });
 
+          setFormDetails(initialFormDetails);
+      };
+    
     return(
         <section className="contact" id="contact">
             <Container>
@@ -58,7 +62,7 @@ function Contact()
                     </Col>
                     <Col md={6}>
                         <h2>Contact Me</h2>
-                        <form onSubmit={handleSubmit}>
+                        <form ref={form} onSubmit={handleSubmit}>
                             <Row>
                                 <Col sm={6} className="px-1">
                                     <input
@@ -104,14 +108,14 @@ function Contact()
                                         placeholder="Leave comment/message here"
                                         onChange={handleChange}
                                     />
+                                    {
+                                        status.message && 
+                                        <Row>
+                                            <p className={status.success ?  "failed" : "success"}>{status.message}</p>
+                                        </Row>
+                                    }
                                     <button><span>{buttonText}</span></button>
                                 </Col>
-                                {
-                                    status.message && 
-                                    <Col>
-                                        <p className={status.success ? "failed" : "success"}>{status.message}</p>
-                                    </Col>
-                                }
                             </Row>
                         </form>
                     </Col>

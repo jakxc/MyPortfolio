@@ -11,8 +11,8 @@ function Banner()
 {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting]= useState(false);
-    const rotatingArray = ["React Developer", "UX/UI Engineer", "Aspiring Unity Developer"];
-    const [text, setText] = useState("");
+    const titlesArray = ["React Developer", "UX/UI Engineer", "Aspiring Unity Developer"];
+    const [titleText, setTitleText] = useState("");
     const [delta, setDelta] = useState(300 - Math.random() * 100) 
     const period = 2000; // Display full text from rotating array period before deleting begins
 
@@ -22,17 +22,17 @@ function Banner()
         }, delta)
    
         return ()=>{clearInterval(ticker)}
-    }, [text])
+    }, [titleText])
 
     function tick()
     {
-        let i = loopNum % rotatingArray.length;
-        let fullText = rotatingArray[i];
+        let i = loopNum % titlesArray.length;
+        let fullText = titlesArray[i];
         let updatedText = isDeleting ? 
-            fullText.substring(0, text.length - 1) : 
-            fullText.substring(0, text.length + 1)
+            fullText.substring(0, titleText.length - 1) : 
+            fullText.substring(0, titleText.length + 1)
 
-        setText(updatedText);
+        setTitleText(updatedText);
 
         if (isDeleting)
         {
@@ -60,10 +60,14 @@ function Banner()
                             {({isVisible}) =>
                                 <div className={isVisible ? "animate__animated animate__pulse" : ""}>
                                     <span className="welcome-text">Welcome to my porfolio!</span>
-                                    <h1>Hi, I am jakxc.<span className="wrap">{text}</span></h1>
-                                    <p></p>
+                                    <h1>Hi, I am jakxc.<span className="wrap">{titleText}</span></h1>
+                                    <p> 
+                                        This portfolio contains a collection of my personal work/projects that I am somewhat proud of.
+                                        This includes projects I created in React JS, Blender and Unity Engine. Feel free to browse around and connect with t
+                                        me through the social links or sending through a comment/message.
+                                    </p>
                                     <Router>
-                                        <HashLink to="#contact">
+                                        <HashLink to="#contact" style={{ textDecoration: 'none' }}>
                                             <button>
                                                 Let's connect <ArrowRightCircle size={25} />
                                             </button>

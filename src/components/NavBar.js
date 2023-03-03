@@ -53,7 +53,7 @@ function NavBar() {
                 <a href="https://www.instagram.com/ray.jxc/"><img src={instagram} alt="" /></a>
               </div>
             <HashLink to="#contact">
-                <button className="vvd"><span>Let’s Connect</span></button>
+                <button><span>Let’s Connect</span></button>
             </HashLink>
             </span>
           </Navbar.Collapse>

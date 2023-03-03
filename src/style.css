@@ -483,8 +483,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-container::before {
   content: "";
-  background: linear-gradient(90.21deg, rgb(95, 95, 95) -5.91%, rgb(184, 182, 182) 111.58%);
-  opacity: 0.85;
+  background: rgb(0, 0, 0);
+  opacity: 0.75;
   position: absolute;
   width: 100%;
   height: 0;
@@ -531,11 +531,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .proj-link {
-  color: rgb(20, 208, 63);
+  color: rgb(255, 255, 255);
 }
 
 .proj-link:hover {
-  color: rgb(15, 127, 41);
+  color: rgb(220, 216, 216);
 }
 
 .background-image-right {
@@ -547,7 +547,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/************Contact Css ************/
 .contact {
   background: linear-gradient(90.21deg, rgba(90, 185, 245, 0.883) -5.91%, rgba(129, 242, 129, 0.51) 111.58%);
   padding: 60px 0 200px 0;
@@ -633,7 +633,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .footer p {
   font-weight: 400;
   font-size: 14px;
-  color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
