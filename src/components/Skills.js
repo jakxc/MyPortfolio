@@ -1,8 +1,9 @@
 import { Col, Container, Row } from "react-bootstrap"
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import { CircularProgressbar } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import TrackVisibility from "react-on-screen";
 import colorSharp from '../assets/img/color-sharp.png';
 
 function Skills()
@@ -26,10 +27,10 @@ function Skills()
         }
       };
 
-      const reactSkill = 60;
-      const unitySkill = 60;
-      const qmlSkill = 70;
-      const blenderSkill = 50;
+      const reactMeter = 70;
+      const qmlMeter = 70;
+      const unityMeter = 60;
+      const blenderMeter = 50;
 
     return(
         <section className='skills' id='skills'>
@@ -37,30 +38,36 @@ function Skills()
                 <Row>
                     <Col>
                         <div className="skills-container">
-                            <h2>Skills</h2>
-                            <p>React JS, Unity Engine/C#, Qt/QML, Blender</p>
+                            <TrackVisibility>
+                                {({isVisible}) =>
+                                    <div className={isVisible ? "animate__animated animate__pulse" : ""}>
+                                        <h2>Skills</h2>
+                                        <p>React JS, Unity Engine/C#, Qt/QML, Blender</p>
+                                    </div>
+                                }
+                            </TrackVisibility>
                             <Carousel responsive={responsive} infinite={true} className="skills-slider">
                                 <div className="skill-element">
                                     <div className="skill-progress"> 
-                                        <CircularProgressbar value={reactSkill} text={`${reactSkill}%`} />
+                                        <CircularProgressbar value={reactMeter} text={`${reactMeter}%`} />
                                     </div>
                                     <h5>React JS</h5>
                                 </div>
                                 <div className="skill-element">
                                     <div className="skill-progress"> 
-                                        <CircularProgressbar value={unitySkill} text={`${unitySkill}%`} />
+                                        <CircularProgressbar value={unityMeter} text={`${unityMeter}%`} />
                                     </div>
                                     <h5>Unity/C#</h5>
                                 </div>
                                 <div className="skill-element">
                                     <div className="skill-progress"> 
-                                        <CircularProgressbar value={reactSkill} text={`${qmlSkill}%`} />
+                                        <CircularProgressbar value={qmlMeter} text={`${qmlMeter}%`} />
                                     </div>
                                     <h5>QT/QML</h5>
                                 </div>
                                 <div className="skill-element">
                                     <div className="skill-progress"> 
-                                        <CircularProgressbar value={reactSkill} text={`${blenderSkill}%`} />
+                                        <CircularProgressbar value={blenderMeter} text={`${blenderMeter}%`} />
                                     </div>
                                     <h5>Blender/3D Modelling</h5>
                                 </div>

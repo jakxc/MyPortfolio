@@ -3,8 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import { HashLink } from 'react-router-hash-link';
 import { BrowserRouter as Router } from "react-router-dom";
-  
-import headerImg from "../assets/img/header-img.svg";
+import planetImg from "../assets/img/planet.png";
 import "animate.css";
 import TrackVisibility from 'react-on-screen';
 
@@ -75,7 +74,7 @@ function Banner()
                         </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt="Header"/>
+                        <img src={planetImg} alt="Header"/>
                     </Col>
                 </Row>
             </Container>

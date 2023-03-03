@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
-import contactImg from "../assets/img/contact-img.svg"
+import foxImg from "../assets/img/fox.png"
 
 function Contact()
 {
@@ -54,7 +54,7 @@ function Contact()
             <Container>
                 <Row className="align-item-center">
                     <Col md={6}>
-                        <img src={contactImg} alt="Contact Me"/>
+                        <img src={foxImg} alt="Contact Me"/>
                     </Col>
                     <Col md={6}>
                         <h2>Contact Me</h2>
